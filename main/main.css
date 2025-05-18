@@ -1,0 +1,700 @@
+/* ==========================================================================
+   1. RESET Y CONFIGURACIÓN GLOBAL
+   ========================================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* ==========================================================================
+   2. LAYOUT GENERAL Y CONTENEDORES
+   ========================================================================== */
+
+.container,
+.container-2 {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container-2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.section-heading {
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.extensions-section {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 150px;
+}
+
+.container-2 .feature-flex-content {
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.feature-flex-content {
+  flex: 0 1 50%;
+}
+
+.feature-flex-content img {
+  width: 100%;
+  height: auto;
+}
+
+.tab-content .tab-panel-1 .container-2 .feature-flex-content img {
+  width: auto;
+  max-width: 100%;
+  max-height: 350px;
+  float: right;
+}
+
+.up-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 100px;
+}
+
+/* ==========================================================================
+   3. ORDENAMIENTO DE ELEMENTOS FLEX
+   ========================================================================== */
+
+.bloque1 {
+  order: 1;
+}
+
+.bloque2 {
+  order: 2;
+}
+
+.feature-image {
+  order: 1;
+}
+
+.feature-description {
+  order: 2;
+}
+
+/* ==========================================================================
+   4. FORMAS DECORATIVAS
+   ========================================================================== */
+
+.blue-square,
+.blue-square-2 {
+  background-color: #5166dd;
+  width: 500px;
+  height: 350px;
+  position: absolute;
+  z-index: -100;
+}
+
+.blue-square {
+  float: right;
+  border-radius: 200px 0 0 200px;
+  right: 0;
+  bottom: 0;
+}
+
+.blue-square-2 {
+  float: left;
+  border-radius: 0 200px 200px 0;
+  left: 0;
+  bottom: 0;
+}
+
+/* ==========================================================================
+   5. NAVBAR SUPERIOR
+   ========================================================================== */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px 40px;
+}
+
+.navbar .logo img {
+  height: 40px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 6px 8px;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #ff0000;
+}
+
+.navbar .btn-login {
+  background-color: #fb5859;
+  color: #fff;
+  padding: 8px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 2px solid #fb5859;
+}
+
+.navbar .btn-login:hover {
+  background-color: #ffffff !important;
+  color: #fb5859 !important;
+  border: 2px solid #fb5859;
+}
+
+.navbar .menu-toggle {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+/* ==========================================================================
+   6. TIPOGRAFÍA Y TEXTOS
+   ========================================================================== */
+
+.entrance h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  font-weight: bold;
+  margin-top: 100px;
+}
+
+.entrance h3 {
+  font-size: 1.2em;
+  margin-bottom: 50px;
+  font-weight: lighter;
+  color: rgb(142, 137, 137);
+  line-height: 1.4em;
+}
+
+.section-heading h2,
+.tab-content div h2 {
+  margin-top: 50px;
+  font-size: 2.3em;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.section-heading h3,
+.tab-content div h3 {
+  font-size: 1.2em;
+  margin-bottom: 50px;
+  font-weight: lighter;
+  color: rgb(142, 137, 137);
+  line-height: 1.4em;
+  text-align: center;
+  max-width: 500px;
+}
+
+/* ==========================================================================
+   7. BOTONES
+   ========================================================================== */
+
+.button-group .btn-primary,
+.button-group .btn-secondary,
+.button-group .btn-3,
+.button-group .btn-install,
+.button-group .btn-5 {
+  background-color: #5166e3;
+  color: #fff;
+  padding: 15px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 2px solid #5166e3;
+  margin-right: 10px;
+}
+
+.button-group .btn-primary:hover,
+.button-group .btn-3:hover,
+.button-group .btn-install:hover,
+.button-group .btn-5:hover {
+  background-color: #ffffff !important;
+  color: #5166e3 !important;
+}
+
+.button-group .btn-secondary {
+  background-color: #eeeeee;
+  color: #3a3939;
+  border: 2px solid #b6b7b7;
+}
+
+.button-group .btn-secondary:hover {
+  background-color: #ffffff !important;
+  color: #3a3939 !important;
+}
+
+.card .button-group {
+  margin-top: 20px;
+}
+
+.container-6 .center {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* ==========================================================================
+   8. TABS
+   ========================================================================== */
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tab-button-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.tab-button-group label {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s;
+  border-bottom: none;
+}
+
+.tabs input[type="radio"] {
+  display: none;
+}
+
+.tab-content > div {
+  display: none;
+  padding: 20px;
+}
+
+#tab1:checked ~ .tab-content .tab-panel-1,
+#tab2:checked ~ .tab-content .tab-panel-2,
+#tab3:checked ~ .tab-content .tab-panel-3 {
+  display: block;
+}
+
+#tab1:checked ~ .tab-button-group label[for="tab1"],
+#tab2:checked ~ .tab-button-group label[for="tab2"],
+#tab3:checked ~ .tab-button-group label[for="tab3"] {
+  background: white;
+  border-bottom: 2px solid rgb(194, 94, 0);
+}
+
+.container-4 {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+  position: relative;
+}
+
+/* ==========================================================================
+   9. TARJETAS DE EXTENSIÓN
+   ========================================================================== */
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card img {
+  width: 150px;
+  margin: 0 auto 30px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card p {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.card button {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.card button:hover {
+  background: #4338ca;
+}
+
+.cards-container .card:nth-child(1) { margin-top: 0; }
+.cards-container .card:nth-child(2) { margin-top: 30px; margin-bottom: -30px; }
+.cards-container .card:nth-child(3) { margin-top: 60px; margin-bottom: -60px; }
+
+.dotted-line {
+  border-top: 5px dotted #ccc;
+  width: 100%;
+  margin: 20px 0;
+}
+
+/* ==========================================================================
+   10. ACORDEÓN
+   ========================================================================== */
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+  border-bottom: 2px solid #eee;
+  transition: box-shadow 0.3s;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.accordion-header::after {
+  content: "\25BE";
+  font-size: 18px;
+  color: #1c40d2;
+  transition: transform 0.3s;
+}
+
+.accordion-item.active .accordion-header::after {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  font-size: 14px;
+  color: #555;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.accordion-item.active .accordion-content {
+  max-height: 200px;
+  padding: 15px 20px;
+}
+
+.accordion-header:hover {
+  color: #fb5859;
+}
+
+/* ==========================================================================
+   11. FOOTER
+   ========================================================================== */
+
+.footer-container {
+  background-color: #5166dd;
+  padding: 40px 20px;
+}
+
+.footer-container h4,
+.footer-container h3 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer-container h3 {
+  font-size: 2em;
+}
+
+.contact-container {
+  padding: 20px;
+  border-radius: 8px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.email-input {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 6px;
+  width: 250px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.contact-button {
+  padding: 12px 20px;
+  background-color: #f65e5e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #e04e4e;
+}
+
+.navbar-footer {
+  background-color: #1f2344;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  color: white;
+  width: 100%;
+}
+
+.navbar-footer .logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.navbar-footer .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar-footer .nav-links a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.navbar-footer .social-icons a {
+  color: white;
+  margin-left: 20px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.navbar-footer .social-icons a:hover {
+  color: #ccc;
+}
+
+/* ==========================================================================
+   12. RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+      h1, h2, h3{
+        text-align: center!important;
+        padding: 0px 20px; 
+      }
+      .feature-description h3{
+        padding: 0px 0px;
+      }
+      .navbar {
+        padding-top: 20px!important;
+      }
+      .navbar ul {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+      .navbar ul {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 80px;
+        right: 40px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+
+      .navbar ul.active {
+        display: flex;
+      }
+
+      .navbar .menu-toggle {
+        display: block;
+        cursor: pointer;
+      }
+
+      .tabs-text {
+    padding: 0px !important;
+}
+
+      .button-group .btn-primary {
+    padding: 10px 16px;
+}
+      .button-group .btn-secondary {
+    padding: 10px 16px;
+}
+       .container-2 {
+      flex-direction: column;
+    }
+    .button-group{
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .blue-square {
+    width: 351px;
+    height: 226px;
+  }
+  .blue-square-2 {
+    width: 351px;
+    height: 226px;
+    top: 230px;
+    bottom: inherit;
+  }
+    .bloque1 {
+      order: 2;
+    }
+    .bloque2 {
+      order: 1;
+    }
+    .feature-image {
+      order: 1;
+    }
+    .feature-description {
+      order: 2;
+    }
+      .feature-flex-content{     
+      flex: 100%;
+      }
+      .container {
+      padding: 0px 20px;
+      }
+      .up-container {
+    margin-top: 20px;
+      }
+      .entrance h1 {
+      margin-top: 20px;
+      }
+      .tab-button-group {
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
+
+    .tab-button-group label {
+      border-bottom: 1px solid #ccc;
+      border-right: none;
+    }
+
+    #tab1:checked ~ .tab-button-group label[for="tab1"],
+    #tab2:checked ~ .tab-button-group label[for="tab2"],
+    #tab3:checked ~ .tab-button-group label[for="tab3"] {
+      border-bottom: 2px solid rgb(194, 94, 0);
+      border-right: none;
+    }
+    .cards-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact-button {
+  width: 250px;
+}
+    .navbar-footer {
+    background-color: #1f2344;
+    display: block;
+
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    color: white;
+    width: 100%;
+}
+.navbar-footer .logo {
+    display: inherit;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.navbar-footer .nav-links {
+    list-style: none;
+display: inherit;
+  gap: 30px;
+  text-align: center;
+}
+.navbar-footer .nav-links li{
+  margin-bottom: 30px;
+}
+.social-icons{
+  text-align: center;
+}
+    }
+
+    
