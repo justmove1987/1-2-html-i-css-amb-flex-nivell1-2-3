@@ -16,6 +16,69 @@ body img {
   max-width: 100%;
   height: auto;
 }
+body .card img {
+  width: 160px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+body .bg-primary {
+  background-color: #5166e3 !important;
+}
+body .feature-flex-content h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+body .py-5 .container h2, body .feature-description h2 {
+  margin-top: 20px;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+body footer .container h3 {
+  font-size: 1.6em;
+  color: rgb(255, 255, 255) !important;
+  line-height: 1.4em;
+  text-align: center;
+  max-width: 500px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+body footer .d-flex {
+  width: 100%;
+  padding: 20px 0px;
+  margin: 0 auto;
+  background-color: #0a0756;
+}
+body footer .d-flex img {
+  filter: brightness(0) invert(1);
+}
+body footer nav {
+  display: block;
+}
+body section .container h3, body .feature-description h3 {
+  font-size: 1.2em;
+  font-weight: lighter;
+  color: rgb(142, 137, 137) !important;
+  line-height: 1.4em;
+  text-align: center;
+  max-width: 500px;
+}
+body .feature-flex-content h3 {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  font-weight: lighter;
+  color: rgb(142, 137, 137);
+  line-height: 1.4em;
+}
+body .feature-description a {
+  display: none;
+}
+body .accordion-item {
+  border: none;
+  border-bottom: 1px solid grey;
+}
 
 .container,
 .container-2 {
@@ -36,7 +99,7 @@ body img {
 
 .up-container {
   display: block;
-  margin-top: 55px;
+  margin-top: 75px;
   position: relative;
 }
 
@@ -60,6 +123,7 @@ body img {
   font-size: 18px;
   margin-bottom: 10px;
   color: #333;
+  font-weight: bold;
 }
 .cards-container .card p {
   font-size: 14px;
@@ -93,28 +157,51 @@ body img {
 .blue-square-2.blue-square {
   border-radius: 200px 0 0 200px;
   right: 0;
-  bottom: 0;
+  top: 55px;
 }
 .blue-square.blue-square-2,
 .blue-square-2.blue-square-2 {
   border-radius: 0 200px 200px 0;
   left: 0;
-  top: 230px;
+  top: 180px;
 }
 
-/* ————— Mobile logo a color, siempre visible hasta abrir menú ————— */
+/* — 1) Container flex para repartir logo y controles — */
+nav.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* antes era space-between */
+}
+
+/* — 2) Logo móvil: siempre a la izquierda y sin filtro — */
 .mobile-logo {
   position: absolute;
   top: 1rem;
   left: 1.5rem;
-  z-index: 1040; /* debajo del overlay */
+  z-index: 1040;
 }
 
 .mobile-logo img {
   filter: none;
 }
 
-/* ————— Overlay full-screen ————— */
+/* — 3) Toggler hamburguesa/cruz (sólo móvil) — */
+.navbar-toggler {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 1060;
+  background: url("/images/icon-hamburger.svg") center no-repeat;
+  border: none;
+  width: 40px;
+  height: 40px;
+}
+
+.navbar-toggler:not(.collapsed) {
+  background-image: url("/images/icon-close.svg");
+}
+
+/* — 4) Overlay full-screen en móvil — */
 .navbar-collapse {
   position: fixed;
   top: 0;
@@ -157,14 +244,14 @@ body img {
   margin: 1.5rem 0;
 }
 
-/* Links en columna */
-.navbar-nav {
+/* Links móviles dentro del overlay */
+.navbar-nav.mx-auto {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.navbar-nav .nav-link {
+.navbar-nav.mx-auto .nav-link {
   color: #fff;
   text-transform: uppercase;
   font-weight: 500;
@@ -173,7 +260,7 @@ body img {
   padding: 0;
 }
 
-/* Botón LOGIN outline blanco */
+/* Botón LOGIN móvil */
 .btn-login {
   margin-top: 2rem;
   width: 80%;
@@ -185,7 +272,7 @@ body img {
   letter-spacing: 2px;
 }
 
-/* Sociales al pie */
+/* Iconos sociales móvil */
 .social-icons {
   display: flex;
   gap: 1rem;
@@ -193,24 +280,10 @@ body img {
   margin-bottom: 2rem;
 }
 
-/* Toggler hamburguesa / cruz */
-.navbar-toggler {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 1060; /* siempre encima */
-  background: url("/images/icon-hamburger.svg") center no-repeat;
-  border: none !important;
-  width: 40px;
-  height: 40px;
-}
-
-.navbar-toggler:not(.collapsed) {
-  background-image: url("/images/icon-close.svg");
-}
-
 .bloque1 {
   order: 2;
+  margin-top: 40px;
+  margin-bottom: 50px;
 }
 
 .bloque2 {
@@ -223,6 +296,52 @@ body img {
 
 .feature-description {
   order: 2;
+  margin-top: 50px;
+}
+
+/* 1) Remove the default Bootstrap tab border */
+#featureTabs {
+  border-bottom: none;
+}
+
+/* 2) Tweak spacing between each tab label */
+#featureTabs .nav-item {
+  margin: 0 1.5rem;
+  border-bottom: 1px solid #ccc;
+}
+
+/* 3) Base look for every tab button */
+#featureTabs .nav-link {
+  border: none; /* kill all borders */
+  color: #6B7280; /* gray text */
+  font-weight: 500;
+  font-size: 1rem;
+  padding-bottom: 0.5rem;
+  position: relative; /* for the ::after underline */
+  transition: color 0.2s;
+  margin: 0 auto;
+}
+
+/* 4) Hover state */
+#featureTabs .nav-link:hover {
+  color: #000;
+}
+
+/* 5) Active state styling */
+#featureTabs .nav-link.active {
+  color: #000; /* black text */
+}
+
+/* 6) Red underline for the active tab */
+#featureTabs .nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: #FA5959;
+  border-radius: 2px 2px 0 0;
 }
 
 .tab-button-group label {
@@ -258,6 +377,15 @@ body img {
   border-color: #fb5859;
 }
 
+.btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+footer {
+  margin-top: 50px;
+}
 footer h4 {
   font-size: 1.2rem;
   margin-bottom: 10px;
@@ -281,6 +409,34 @@ footer form .btn {
   .container-2 .feature-flex-content {
     flex: 0 0 50%;
   }
+  #featureTabs {
+    border-bottom: 1px solid #ccc;
+  }
+  #featureTabs .nav-item {
+    border-bottom: none;
+  }
+  .blue-square.blue-square, .blue-square-2.blue-square {
+    border-radius: 200px 0 0 200px;
+    right: 0;
+    top: 100px;
+  }
+  .cards-container .card:nth-child(2) {
+    margin-top: 30px;
+    margin-bottom: -30px;
+  }
+  .cards-container .card:nth-child(3) {
+    margin-top: 60px;
+    margin-bottom: -60px;
+  }
+  body .feature-flex-content h1 {
+    text-align: left;
+  }
+  body .feature-flex-content h3 {
+    text-align: left;
+  }
+  body section .container h3, body .feature-description h3 {
+    margin: 0 auto;
+  }
   .bloque1 {
     order: 1;
   }
@@ -290,7 +446,7 @@ footer form .btn {
   .blue-square,
   .blue-square-2 {
     width: 500px;
-    height: 350px;
+    height: 270px;
   }
   .cards-container {
     flex-direction: row;
@@ -302,41 +458,33 @@ footer form .btn {
     display: flex;
     justify-content: space-between;
   }
-  /* Restauramos el navbar estándar */
-  .navbar-collapse {
-    position: static !important;
-    transform: none !important;
-    width: auto !important;
-    height: auto !important;
-    background: none !important;
-    display: flex !important;
-    flex-direction: row !important;
-    padding: 0 !important;
-  }
-  /* Ocultamos los elementos exclusivos de móvil */
   .mobile-logo,
+  .navbar-toggler,
+  .navbar-collapse,
   .mobile-header,
   .menu-divider,
   .btn-login,
   .social-icons {
     display: none !important;
   }
+  /* Los navs del escritorio quedan visibles (gracias a d-md-flex) */
   .navbar-nav {
+    display: flex !important;
     flex-direction: row;
-    gap: 0.5rem;
+    gap: 1rem;
+    margin-left: auto; /* esto lo envía a la derecha */
   }
-  .nav-link {
-    color: #000 !important;
+  .navbar-nav.d-md-flex .nav-link {
+    color: #000;
     text-transform: none;
-    letter-spacing: normal;
     font-weight: 400;
-    font-size: 0.9rem;
+    letter-spacing: normal;
+    padding: 0.5rem 1rem;
   }
-  .navbar-toggler {
-    position: relative;
-    background: none;
+  footer .container {
+    max-width: 100% !important;
   }
-  .navbar-toggler:not(.collapsed) {
-    background-image: none;
+  body footer .d-flex {
+    padding: 20px 100px;
   }
 }/*# sourceMappingURL=main.css.map */
