@@ -3,216 +3,216 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Bookmark</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="main/main.css">
 </head>
 <body>
 
-  <header class="header">
-    <nav class="navbar container">
-      <div class="logo">
-        <a href="#"><img src="./images/logo-bookmark.svg" alt="Logo" height="40"></a>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-light bg-white py-3">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="./images/logo-bookmark.svg" alt="Logo" height="40"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">FEATURES</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">PRICING</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+          <li class="nav-item"><a class="btn btn-danger ms-3" href="#">LOGIN</a></li>
+        </ul>
       </div>
-      <div class="menu-toggle">&#9776;</div>
-      <ul>
-        <li><a href="#">FEATURES</a></li>
-        <li><a href="#">PRICING</a></li>
-        <li><a href="#">CONTACT</a></li>
-        <li><a class="btn-login" href="#">LOGIN</a></li>
-      </ul>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
-  <main>
-    <section class="up-container">
-      <div class="blue-square"></div>
-      <div class="container-2">
-        <article class="feature-flex-content entrance bloque1">
-          <h1>A Simple Book Manager</h1>
-          <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odio esse delectus aliquam sit suscipit dolores!</h3>
-          <div class="button-group">
-            <a class="btn-primary" href="#">Get it on Chrome</a> 
-            <a class="btn-secondary" href="#">Get it on Firefox</a>
-          </div>
-        </article>
-        <div class="feature-flex-content image-1 bloque2">
-          <img src="./images/illustration-hero.svg" alt="">
-          
+  <!-- Hero Section -->
+  <section class="up-container position-relative">
+    <div class="blue-square"></div>
+    <div class="container-2">
+      <div class="feature-flex-content bloque1">
+        <h1>A Simple Book Manager</h1>
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odio esse delectus aliquam sit suscipit dolores!</h3>
+        <div class="d-flex flex-column flex-md-row gap-2 mt-4">
+          <a class="btn btn-primary" href="#">Get it on Chrome</a>
+          <a class="btn btn-outline-secondary" href="#">Get it on Firefox</a>
         </div>
       </div>
-    </section>
-
-    <section class="section-heading">
-      <h2>Features</h2>
-      <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odio esse delectus aliquam sit suscipit dolores!</h3>
-    </section>
-
-  <section class="container-4">
-    <div class="blue-square-2"></div>
-    <div class="tabs">
-  <!-- Inputs radio ocultos -->
-  <input type="radio" name="tabs" id="tab1" checked>
-  <input type="radio" name="tabs" id="tab2">
-  <input type="radio" name="tabs" id="tab3">
-
-  <!-- Botones de pestañas -->
-  <div class="tab-button-group">
-    <label for="tab1">Simple Bookmarking</label>
-    <label for="tab2">Speedy searching</label>
-    <label for="tab3">Easy sharing</label>
-  </div>
-
-  <!-- Contenido de las pestañas -->
-  <div class="tab-content">
-    <div class="tab-panel-1">
-      <div class="container-2">
-        <div class="feature-flex-content image-1 feature-image">
-        <img src="./images/illustration-features-tab-1.svg" >      
+      <div class="feature-flex-content bloque2 text-center">
+        <img src="./images/illustration-hero.svg" alt="">
+      </div>
     </div>
-    <div class="feature-flex-content tabs-text feature-description">
-        <h2>Bookmark is one click</h2>
-        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odio esse delectus aliquam sit suscipit dolores!</h3>
-        <div class="button-group">
-          <a class="btn-primary" href="#">More info</a>        
-        </div>
-    </div>
-    
-  </div>
-    </div>
-    <div class="tab-panel-2">
-      <div class="container-2">
-        <div class="feature-flex-content image-1 feature-image">
-        <img src="./images/illustration-features-tab-2.svg" >      
-    </div>
-    <div class="feature-flex-content tabs-text feature-description">
-        <h2>Bookmark is one click</h2>
-        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odio esse delectus aliquam sit suscipit dolores!</h3>
-        <div class="button-group">
-          <a class="btn-primary" href="#">More info</a>
-        
-        </div>
-    </div>
-    
-  </div>
-    </div>
-    <div class="tab-panel-3">
-      <div class="container-2">
-        <div class="feature-flex-content image-1 feature-image">
-        <img src="./images/illustration-features-tab-3.svg" >      
-    </div>
-    <div class="feature-flex-content tabs-text feature-description">
-        <h2>Bookmark is one click</h2>
-        <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odio esse delectus aliquam sit suscipit dolores!</h3>
-        <div class="button-group">
-          <a class="btn-primary" href="#">More info</a> 
-        
-        </div>
-    </div>
-    
-  </div>
-    </div>
-  </div>
-</div>
   </section>
 
-   <section class="section-heading">
-      <h2>Download the extension</h2>
-      <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odio esse delectus.</h3>
-    </section>
+  <!-- Features Heading -->
+  <section class="text-center py-5">
+    <div class="container">
+      <h2>Features</h2>
+      <h3 class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odio esse delectus aliquam sit suscipit dolores!</h3>
+    </div>
+  </section>
 
-    <section class="extensions-section">
+  <!-- Tabs Section -->
+  <section class="container-4 position-relative py-5">
+    <div class="blue-square-2"></div>
+    <div class="container">
+      <ul class="nav nav-tabs justify-content-center" id="featureTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab">Simple Bookmarking</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab">Speedy Searching</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab">Easy Sharing</button>
+        </li>
+      </ul>
+      <div class="tab-content py-4">
+        <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+          <div class="container-2">
+            <div class="feature-flex-content feature-image">
+              <img src="./images/illustration-features-tab-1.svg" alt="">
+            </div>
+            <div class="feature-flex-content feature-description">
+              <h2>Bookmark in one click</h2>
+              <h3 class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odio esse delectus aliquam sit suscipit dolores!</h3>
+              <a href="#" class="btn btn-primary">More Info</a>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="tab2" role="tabpanel">
+          <div class="container-2">
+            <div class="feature-flex-content feature-image">
+              <img src="./images/illustration-features-tab-2.svg" alt="">
+            </div>
+            <div class="feature-flex-content feature-description">
+              <h2>Intelligent search</h2>
+              <h3 class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odio esse delectus aliquam sit suscipit dolores!</h3>
+              <a href="#" class="btn btn-primary">More Info</a>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="tab3" role="tabpanel">
+          <div class="container-2">
+            <div class="feature-flex-content feature-image">
+              <img src="./images/illustration-features-tab-3.svg" alt="">
+            </div>
+            <div class="feature-flex-content feature-description">
+              <h2>Share your bookmarks</h2>
+              <h3 class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odio esse delectus aliquam sit suscipit dolores!</h3>
+              <a href="#" class="btn btn-primary">More Info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Extensions Section -->
+  <section class="text-center py-5">
+    <div class="container">
+      <h2>Download the extension</h2>
+      <p class="text-muted mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odio esse delectus.</p>
       <div class="cards-container">
         <article class="card">
           <img src="./images/logo-chrome.svg" alt="Chrome Logo">
-          <h3>Add to Chrome</h3>
+          <h5>Add to Chrome</h5>
           <p>Minimum version 62</p>
-          <div class="dotted-line"></div>
-          <div class="button-group"><a class="btn-install" href="#">Add & Install Extension</a></div>
+          <hr>
+          <a href="#" class="btn btn-primary">Add & Install Extension</a>
         </article>
-
         <article class="card">
           <img src="./images/logo-firefox.svg" alt="Firefox Logo">
-          <h3>Add to Firefox</h3>
+          <h5>Add to Firefox</h5>
           <p>Minimum version 55</p>
-          <div class="dotted-line"></div>
-          <div class="button-group"><a class="btn-install" href="#">Add & Install Extension</a></div>
+          <hr>
+          <a href="#" class="btn btn-primary">Add & Install Extension</a>
         </article>
-
         <article class="card">
           <img src="./images/logo-opera.svg" alt="Opera Logo">
-          <h3>Add to Opera</h3>
+          <h5>Add to Opera</h5>
           <p>Minimum version 46</p>
-          <div class="dotted-line"></div>
-          <div class="button-group"><a class="btn-install" href="#">Add & Install Extension</a></div>
+          <hr>
+          <a href="#" class="btn btn-primary">Add & Install Extension</a>
         </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section-heading">
-      <h2>Frequently asked questions</h2>
-      <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odio esse delectus.</h3>
-    </section>
-
-    <section class="container-6">
-      <div class="accordion">
-        <article class="accordion-item">
-          <div class="accordion-header">What is Bookmark?</div>
-          <div class="accordion-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odio esse delectus...</div>
-        </article>
-
-        <article class="accordion-item">
-          <div class="accordion-header">How can I request a new browser?</div>
-          <div class="accordion-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odio esse delectus...</div>
-        </article>
-
-        <article class="accordion-item">
-          <div class="accordion-header">Is there a mobile app?</div>
-          <div class="accordion-content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odio esse delectus...</div>
-        </article>
-
-        <article class="accordion-item">
-          <div class="accordion-header">What about other Chromium browsers?</div>
-          <div class="accordion-content">Other Chromium browsers are also supported, such as Brave, Opera, and Vivaldi.</div>
-        </article>
+  <!-- FAQ Section -->
+  <section class="py-5 text-center">
+    <div class="container">
+      <h2>Frequently Asked Questions</h2>
+      <h3 class="text-muted mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odio esse delectus.</h3>
+      <div class="accordion" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">What is Bookmark?</button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse show">
+            <div class="accordion-body text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odio esse delectus...</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">How can I request a new browser?</button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse">
+            <div class="accordion-body text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odio esse delectus...</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Is there a mobile app?</button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse">
+            <div class="accordion-body text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus odio esse delectus...</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">What about other Chromium browsers?</button>
+          </h2>
+          <div id="faq4" class="accordion-collapse collapse">
+            <div class="accordion-body text-start">Other Chromium browsers are also supported, such as Brave, Opera, and Vivaldi.</div>
+          </div>
+        </div>
       </div>
-      <div class="button-group center"><a class="btn-5" href="#">More info</a></div>
-    </section>
-  </main>
+      <a href="#" class="btn btn-primary mt-4">More Info</a>
+    </div>
+  </section>
 
-  <footer class="footer">
-    <section class="footer-container">
-      <h4>35.000+ already joined</h4>
-      <h3>Stay up-to-date with what we're doing</h3>
-      <div class="contact-container">
-        <input type="email" placeholder="Enter your email address" class="email-input">
-        <button class="contact-button">Contact Us</button>
-      </div>
-    </section>
-
-    <nav class="navbar-footer">
-      <div class="logo">
-        <a href="#"><img src="./images/logo-bookmark.svg" alt="Logo" height="40"></a>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Contact</a></li>
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-5">
+    <div class="container">
+      <h4>35,000+ already joined</h4>
+      <h3 class="mb-4">Stay up-to-date with what we're doing</h3>
+      <form class="row justify-content-center">
+        <div class="col-md-4">
+          <input type="email" class="form-control mb-2" placeholder="Enter your email address">
+        </div>
+        <div class="col-md-2">
+          <button type="submit" class="btn btn-danger w-100">Contact Us</button>
+        </div>
+      </form>
+    </div>
+  </footer>
+  <footer class="bg-dark text-white py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <a href="#"><img src="./images/logo-bookmark.svg" height="40" alt="Logo"></a>
+      <ul class="nav justify-content-center my-3 my-md-0">
+        <li class="nav-item"><a class="nav-link text-white" href="#">Features</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li>
       </ul>
-      <div class="social-icons">
-        <a href="#"><img src="./images/icon-facebook.svg" alt=""></a>
-        <a href="#"><img src="./images/icon-twitter.svg" alt=""></a>
+      <div>
+        <a href="#"><img src="./images/icon-facebook.svg" alt="Facebook"></a>
+        <a href="#" class="ms-3"><img src="./images/icon-twitter.svg" alt="Twitter"></a>
       </div>
-    </nav>
+    </div>
   </footer>
 
-  <script>
-    const headers = document.querySelectorAll('.accordion-header');
-    headers.forEach(header => {
-      header.addEventListener('click', () => {
-        const item = header.parentElement;
-        item.classList.toggle('active');
-      });
-    });
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
