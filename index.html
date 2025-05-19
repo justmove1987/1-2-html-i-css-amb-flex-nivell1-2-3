@@ -10,22 +10,54 @@
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-md navbar-light bg-white py-3">
-    <div class="container">
-      <a class="navbar-brand" href="#"><img src="./images/logo-bookmark.svg" alt="Logo" height="40"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#">FEATURES</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">PRICING</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
-          <li class="nav-item"><a class="btn btn-danger ms-3" href="#">LOGIN</a></li>
-        </ul>
+  <nav class="navbar navbar-expand-md navbar-light bg-white py-3 position-relative">
+  <div class="container position-relative">
+    <!-- 1) Logo móvil a color (siempre visible en mobile) -->
+    <a class="navbar-brand mobile-logo d-md-none" href="#">
+      <img src="./images/logo-bookmark.svg" alt="Logo" height="40">
+    </a>
+
+    <!-- toggler -->
+    <button
+      class="navbar-toggler collapsed"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    ></button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <!-- 2) Header móvil dentro del overlay (logo blanco + close) -->
+      <div class="mobile-header d-md-none">
+        <a class="navbar-brand" href="#">
+          <img src="./images/logo-bookmark.svg" alt="Logo" height="40">
+        </a>
+      </div>
+
+      <hr class="menu-divider d-md-none">
+
+      <ul class="navbar-nav mx-auto d-md-none">
+        <li class="nav-item"><a class="nav-link" href="#">FEATURES</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">PRICING</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+      </ul>
+
+      <a href="#" class="btn btn-outline-light btn-login d-md-none">LOGIN</a>
+
+      <div class="social-icons d-md-none">
+        <a href="#"><img src="./images/icon-facebook.svg" alt="Facebook"></a>
+        <a href="#"><img src="./images/icon-twitter.svg" alt="Twitter"></a>
       </div>
     </div>
-  </nav>
+
+    <!-- logo de escritorio -->
+    <a class="navbar-brand d-none d-md-block" href="#">
+      <img src="./images/logo-bookmark.svg" alt="Logo" height="40">
+    </a>
+  </div>
+</nav>
 
   <!-- Hero Section -->
   <section class="up-container position-relative">
