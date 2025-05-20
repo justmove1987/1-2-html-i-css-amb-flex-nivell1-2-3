@@ -191,14 +191,14 @@ nav.navbar .container {
   top: 1rem;
   right: 1.5rem;
   z-index: 1060;
-  background: url("/images/icon-hamburger.svg") center no-repeat;
+  background: url("./images/icon-hamburger.svg") center no-repeat;
   border: none;
   width: 40px;
   height: 40px;
 }
 
 .navbar-toggler:not(.collapsed) {
-  background-image: url("/images/icon-close.svg");
+  background-image: url("./images/icon-close.svg");
 }
 
 /* — 4) Overlay full-screen en móvil — */
