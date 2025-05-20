@@ -91,7 +91,7 @@ body {
     }
     .d-flex {
       width: 100%;
-      padding: 20px 0;
+      padding: 20px 20px;
       margin: 0 auto;
       background-color: #0a0756;
       img {
@@ -325,8 +325,8 @@ nav.navbar .container {
 }
 
 // 5. COMPONENTS I ESTILS PERSONALITZATS
-.bloque1 { order: 1; margin-top: 40px; margin-bottom: 50px; }
-.bloque2 { order: 2; }
+.bloque1 { order: 2; margin-top: 40px; margin-bottom: 50px; }
+.bloque2 { order: 1; }
 .feature-image { order: 1; }
 .feature-description { order: 2; margin-top: 50px; }
 
@@ -455,6 +455,8 @@ footer {
 body .feature-flex-content h3 {
     text-align: left;
 }
+.bloque1 { order: 1;}
+.bloque2 { order: 2; }
 
   #featureTabs {
     border-bottom: 1px solid $dot-color;
