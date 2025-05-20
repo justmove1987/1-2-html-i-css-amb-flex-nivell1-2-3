@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -18,8 +17,7 @@ body img {
 }
 body .card img {
   width: 160px;
-  margin: 0 auto;
-  margin-bottom: 30px;
+  margin: 0 auto 30px;
 }
 body .bg-primary {
   background-color: #5166e3 !important;
@@ -29,7 +27,15 @@ body .feature-flex-content h1 {
   margin-bottom: 20px;
   font-weight: bold;
 }
-body .py-5 .container h2, body .feature-description h2 {
+body .feature-flex-content h3 {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  font-weight: lighter;
+  color: rgb(142, 137, 137);
+  line-height: 1.4em;
+}
+body .py-5 .container h2,
+body .feature-description h2 {
   margin-top: 20px;
   font-size: 1.8em;
   margin-bottom: 20px;
@@ -38,7 +44,7 @@ body .py-5 .container h2, body .feature-description h2 {
 }
 body footer .container h3 {
   font-size: 1.6em;
-  color: rgb(255, 255, 255) !important;
+  color: #fff !important;
   line-height: 1.4em;
   text-align: center;
   max-width: 500px;
@@ -47,7 +53,7 @@ body footer .container h3 {
 }
 body footer .d-flex {
   width: 100%;
-  padding: 20px 0px;
+  padding: 20px 0;
   margin: 0 auto;
   background-color: #0a0756;
 }
@@ -57,20 +63,15 @@ body footer .d-flex img {
 body footer nav {
   display: block;
 }
-body section .container h3, body .feature-description h3 {
+body section .container h3,
+body section .feature-description h3 {
   font-size: 1.2em;
   font-weight: lighter;
   color: rgb(142, 137, 137) !important;
   line-height: 1.4em;
   text-align: center;
   max-width: 500px;
-}
-body .feature-flex-content h3 {
-  font-size: 1.2em;
-  margin-bottom: 30px;
-  font-weight: lighter;
-  color: rgb(142, 137, 137);
-  line-height: 1.4em;
+  margin: 0 auto;
 }
 body .feature-description a {
   display: none;
@@ -153,39 +154,35 @@ body .accordion-item {
   position: absolute;
   z-index: -100;
 }
-.blue-square.blue-square,
-.blue-square-2.blue-square {
+
+.blue-square {
   border-radius: 200px 0 0 200px;
   right: 0;
   top: 55px;
 }
-.blue-square.blue-square-2,
-.blue-square-2.blue-square-2 {
+
+.blue-square-2 {
   border-radius: 0 200px 200px 0;
   left: 0;
   top: 180px;
 }
 
-/* — 1) Container flex para repartir logo y controles — */
 nav.navbar .container {
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* antes era space-between */
+  justify-content: flex-start;
 }
 
-/* — 2) Logo móvil: siempre a la izquierda y sin filtro — */
 .mobile-logo {
   position: absolute;
   top: 1rem;
   left: 1.5rem;
   z-index: 1040;
 }
-
 .mobile-logo img {
   filter: none;
 }
 
-/* — 3) Toggler hamburguesa/cruz (sólo móvil) — */
 .navbar-toggler {
   position: absolute;
   top: 1rem;
@@ -196,12 +193,10 @@ nav.navbar .container {
   width: 40px;
   height: 40px;
 }
-
 .navbar-toggler:not(.collapsed) {
   background-image: url("/images/icon-close.svg");
 }
 
-/* — 4) Overlay full-screen en móvil — */
 .navbar-collapse {
   position: fixed;
   top: 0;
@@ -217,41 +212,31 @@ nav.navbar .container {
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
 }
-
 .navbar-collapse.show {
   transform: translateX(0);
 }
-
-/* Header móvil dentro del overlay */
-.mobile-header {
+.navbar-collapse .mobile-header {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1.5rem;
 }
-
-/* Logo blanco en el overlay */
-.mobile-header .navbar-brand img {
+.navbar-collapse .mobile-header .navbar-brand img {
   filter: brightness(0) invert(1);
 }
-
-/* Separador */
-.menu-divider {
+.navbar-collapse .menu-divider {
   width: 80%;
   border: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   margin: 1.5rem 0;
 }
-
-/* Links móviles dentro del overlay */
-.navbar-nav.mx-auto {
+.navbar-collapse .navbar-nav.mx-auto {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-
-.navbar-nav.mx-auto .nav-link {
+.navbar-collapse .navbar-nav.mx-auto .nav-link {
   color: #fff;
   text-transform: uppercase;
   font-weight: 500;
@@ -259,9 +244,7 @@ nav.navbar .container {
   font-size: 1.125rem;
   padding: 0;
 }
-
-/* Botón LOGIN móvil */
-.btn-login {
+.navbar-collapse .btn-login {
   margin-top: 2rem;
   width: 80%;
   border: 1px solid #fff;
@@ -271,9 +254,7 @@ nav.navbar .container {
   font-weight: 500;
   letter-spacing: 2px;
 }
-
-/* Iconos sociales móvil */
-.social-icons {
+.navbar-collapse .social-icons {
   display: flex;
   gap: 1rem;
   margin-top: auto;
@@ -281,13 +262,13 @@ nav.navbar .container {
 }
 
 .bloque1 {
-  order: 2;
+  order: 1;
   margin-top: 40px;
   margin-bottom: 50px;
 }
 
 .bloque2 {
-  order: 1;
+  order: 2;
 }
 
 .feature-image {
@@ -299,40 +280,29 @@ nav.navbar .container {
   margin-top: 50px;
 }
 
-/* 1) Remove the default Bootstrap tab border */
 #featureTabs {
   border-bottom: none;
 }
-
-/* 2) Tweak spacing between each tab label */
 #featureTabs .nav-item {
   margin: 0 1.5rem;
   border-bottom: 1px solid #ccc;
 }
-
-/* 3) Base look for every tab button */
 #featureTabs .nav-link {
-  border: none; /* kill all borders */
-  color: #6B7280; /* gray text */
+  border: none;
+  color: #6B7280;
   font-weight: 500;
   font-size: 1rem;
   padding-bottom: 0.5rem;
-  position: relative; /* for the ::after underline */
+  position: relative;
   transition: color 0.2s;
   margin: 0 auto;
 }
-
-/* 4) Hover state */
 #featureTabs .nav-link:hover {
   color: #000;
 }
-
-/* 5) Active state styling */
 #featureTabs .nav-link.active {
-  color: #000; /* black text */
+  color: #000;
 }
-
-/* 6) Red underline for the active tab */
 #featureTabs .nav-link.active::after {
   content: "";
   position: absolute;
@@ -340,11 +310,11 @@ nav.navbar .container {
   left: 0;
   height: 4px;
   width: 100%;
-  background-color: #FA5959;
+  background-color: #fb5859;
   border-radius: 2px 2px 0 0;
 }
 
-.tab-button-group label {
+tab-button-group label {
   padding: 10px;
   text-align: center;
   cursor: pointer;
@@ -356,13 +326,13 @@ nav.navbar .container {
   border-color: #5166e3;
 }
 .btn-primary:hover {
-  background-color: white;
+  background-color: #fff;
   color: #5166e3;
   border-color: #5166e3;
 }
 
 .btn-outline-secondary:hover {
-  background-color: white;
+  background-color: #fff;
   color: #333;
   border-color: #b6b7b7;
 }
@@ -372,7 +342,7 @@ nav.navbar .container {
   border-color: #fb5859;
 }
 .btn-danger:hover {
-  background-color: white;
+  background-color: #fff;
   color: #fb5859;
   border-color: #fb5859;
 }
@@ -409,41 +379,23 @@ footer form .btn {
   .container-2 .feature-flex-content {
     flex: 0 0 50%;
   }
-  #featureTabs {
-    border-bottom: 1px solid #ccc;
-  }
-  #featureTabs .nav-item {
-    border-bottom: none;
-  }
-  .blue-square.blue-square, .blue-square-2.blue-square {
-    border-radius: 200px 0 0 200px;
-    right: 0;
-    top: 100px;
-  }
-  .cards-container .card:nth-child(2) {
-    margin-top: 30px;
-    margin-bottom: -30px;
-  }
-  .cards-container .card:nth-child(3) {
-    margin-top: 60px;
-    margin-bottom: -60px;
-  }
   body .feature-flex-content h1 {
     text-align: left;
   }
   body .feature-flex-content h3 {
     text-align: left;
   }
-  body section .container h3, body .feature-description h3 {
-    margin: 0 auto;
+  #featureTabs {
+    border-bottom: 1px solid #ccc;
   }
-  .bloque1 {
-    order: 1;
+  #featureTabs .nav-item {
+    border-bottom: none;
   }
-  .bloque2 {
-    order: 2;
+  .blue-square {
+    top: 100px;
+    width: 500px;
+    height: 270px;
   }
-  .blue-square,
   .blue-square-2 {
     width: 500px;
     height: 270px;
@@ -452,6 +404,12 @@ footer form .btn {
     flex-direction: row;
     justify-content: center;
     gap: 30px;
+  }
+  .cards-container .card:nth-child(2) {
+    margin: 30px 0 -30px;
+  }
+  .cards-container .card:nth-child(3) {
+    margin: 60px 0 -60px;
   }
   .up-container {
     margin-top: 100px;
@@ -467,14 +425,13 @@ footer form .btn {
   .social-icons {
     display: none !important;
   }
-  /* Los navs del escritorio quedan visibles (gracias a d-md-flex) */
   .navbar-nav {
     display: flex !important;
     flex-direction: row;
     gap: 1rem;
-    margin-left: auto; /* esto lo envía a la derecha */
+    margin-left: auto;
   }
-  .navbar-nav.d-md-flex .nav-link {
+  .navbar-nav .nav-link {
     color: #000;
     text-transform: none;
     font-weight: 400;
@@ -484,7 +441,7 @@ footer form .btn {
   footer .container {
     max-width: 100% !important;
   }
-  body footer .d-flex {
+  footer .d-flex {
     padding: 20px 100px;
   }
 }/*# sourceMappingURL=main.css.map */
