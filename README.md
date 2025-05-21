@@ -34,7 +34,8 @@ cd 1-2-html-i-css-amb-flex-nivell1-2-3
 
 (Opcional) Si trabajas con SASS, instala las dependencias y compílalo:
 
-# Por ejemplo, con npm y sass
+Por ejemplo, con npm y sass
+--
 npm install
 npm run build:sass
 
