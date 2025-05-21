@@ -23,7 +23,12 @@ body {
   font-family: $font-family;
   line-height: $line-height;
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     text-align: center;
   }
 
@@ -31,72 +36,74 @@ body {
     max-width: 100%;
     height: auto;
   }
-  .card img{
+  .card img {
     width: 160px;
     margin: 0 auto;
     margin-bottom: 30px;
   }
-  .bg-primary{
-    background-color: #5166e3!important;
+  .bg-primary {
+    background-color: #5166e3 !important;
   }
 
   .feature-flex-content h1 {
     font-size: 3em;
     margin-bottom: 20px;
     font-weight: bold;
-}
-.py-5 .container h2, .feature-description h2 {
+  }
+  .py-5 .container h2,
+  .feature-description h2 {
     margin-top: 20px;
     font-size: 1.8em;
     margin-bottom: 20px;
     font-weight: bold;
     text-align: center;
-}
-footer .container h3{
+  }
+  footer .container h3 {
     font-size: 1.6em;
-    color: rgb(255, 255, 255)!important;
+    color: rgb(255, 255, 255) !important;
     line-height: 1.4em;
     text-align: center;
     max-width: 500px;
     font-weight: bold;
     margin: 0 auto;
-}
-footer .d-flex{
-      width: 100%;
+  }
+  footer .d-flex {
+    width: 100%;
     padding: 20px 0px;
     margin: 0 auto;
     background-color: #0a0756;
-}
-footer .d-flex img{
-filter: brightness(0) invert(1);
-}
-footer nav{
-      display: block;
-}
+  }
+  footer .d-flex img {
+    filter: brightness(0) invert(1);
+  }
+  footer nav {
+    display: block;
+  }
 
-section .container h3, .feature-description h3 {
+  section .container h3,
+  .feature-description h3 {
     font-size: 1.2em;
     font-weight: lighter;
-    color: rgb(142, 137, 137)!important;
+    color: rgb(142, 137, 137) !important;
     line-height: 1.4em;
     text-align: center;
     max-width: 500px;
-}
+  }
 
-.feature-flex-content h3 {
+  .feature-flex-content h3 {
     font-size: 1.2em;
     margin-bottom: 30px;
     font-weight: lighter;
     color: rgb(142, 137, 137);
     line-height: 1.4em;
-}
-.feature-description a {
+  }
+  .feature-description a {
     display: none;
-}
-.accordion-item{
-  border: none;
-  border-bottom: 1px solid grey;
-}
+  }
+  .accordion-item {
+    border: none;
+    border-bottom: 1px solid grey;
+  }
 }
 
 // 2. ESTRUCTURA Y LAYOUT BASE (MOBILE-FIRST)
@@ -196,7 +203,7 @@ section .container h3, .feature-description h3 {
 nav.navbar .container {
   display: flex;
   align-items: center;
-  justify-content: flex-start;    /* antes era space-between */
+  justify-content: flex-start; /* antes era space-between */
 }
 
 /* — 2) Logo móvil: siempre a la izquierda y sin filtro — */
@@ -216,27 +223,30 @@ nav.navbar .container {
   top: 1rem;
   right: 1.5rem;
   z-index: 1060;
-  background: url('../images/icon-hamburger.svg') center no-repeat;
+  background: url("../images/icon-hamburger.svg") center no-repeat;
   border: none;
-  width: 40px; height: 40px;
+  width: 40px;
+  height: 40px;
 }
 .navbar-toggler:not(.collapsed) {
-  background-image: url('../images/icon-close.svg');
+  background-image: url("../images/icon-close.svg");
 }
 
 /* — 4) Overlay full-screen en móvil — */
 .navbar-collapse {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%;  height: 100vh;
-  background-color: rgba(10,25,47,0.85);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(10, 25, 47, 0.85);
   display: flex;
   flex-direction: column;
   padding-top: 2rem;
   align-items: center;
   z-index: 1050;
   transform: translateX(-100%);
-  transition: transform .3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 .navbar-collapse.show {
   transform: translateX(0);
@@ -259,7 +269,7 @@ nav.navbar .container {
 .menu-divider {
   width: 80%;
   border: 0;
-  border-top: 1px solid rgba(255,255,255,0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   margin: 1.5rem 0;
 }
 
@@ -298,12 +308,22 @@ nav.navbar .container {
   margin-bottom: 2rem;
 }
 
-
 // 4. COMPONENTES Y ESTILOS PERSONALIZADOS
-.bloque1 { order: 2; margin-top: 40px; margin-bottom: 50px; }
-.bloque2 { order: 1; }
-.feature-image { order: 1; }
-.feature-description { order: 2; margin-top: 50px; }
+.bloque1 {
+  order: 2;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+.bloque2 {
+  order: 1;
+}
+.feature-image {
+  order: 1;
+}
+.feature-description {
+  order: 2;
+  margin-top: 50px;
+}
 
 /* 1) Remove the default Bootstrap tab border */
 #featureTabs {
@@ -318,13 +338,13 @@ nav.navbar .container {
 
 /* 3) Base look for every tab button */
 #featureTabs .nav-link {
-  border: none;               /* kill all borders */
-  color: #6B7280;             /* gray text */
+  border: none; /* kill all borders */
+  color: #6b7280; /* gray text */
   font-weight: 500;
   font-size: 1rem;
   padding-bottom: 0.5rem;
-  position: relative;         /* for the ::after underline */
-  transition: color .2s;
+  position: relative; /* for the ::after underline */
+  transition: color 0.2s;
   margin: 0 auto;
 }
 
@@ -335,7 +355,7 @@ nav.navbar .container {
 
 /* 5) Active state styling */
 #featureTabs .nav-link.active {
-  color: #000;                /* black text */
+  color: #000; /* black text */
 }
 
 /* 6) Red underline for the active tab */
@@ -346,10 +366,9 @@ nav.navbar .container {
   left: 0;
   height: 4px;
   width: 100%;
-  background-color: #FA5959;
+  background-color: #fa5959;
   border-radius: 2px 2px 0 0;
 }
-
 
 .tab-button-group {
   label {
@@ -364,6 +383,8 @@ nav.navbar .container {
 .btn-primary {
   background-color: $primary-color-alt;
   border-color: $primary-color-alt;
+  border-radius: 10px!important;
+  box-shadow: 0px 3px 5px #989696;
 
   &:hover {
     background-color: white;
@@ -372,18 +393,23 @@ nav.navbar .container {
   }
 }
 
+
 .btn-outline-secondary {
+  border-radius: 10px!important;
+  box-shadow: 0px 3px 5px #989696;
   &:hover {
     background-color: white;
     color: $text-color;
     border-color: $secondary-border-hover;
+    
   }
 }
-
 
 .btn-danger {
   background-color: $danger-color;
   border-color: $danger-color;
+  border-radius: 10px!important;
+  box-shadow: 0px 3px 5px #989696;
 
   &:hover {
     background-color: white;
@@ -403,6 +429,12 @@ footer {
   h4 {
     font-size: 1.2rem;
     margin-bottom: 10px;
+  }
+  div .nav{
+    display: contents!important;
+  }
+  .container{
+    max-width: 100%;
   }
 
   h3 {
@@ -433,35 +465,41 @@ footer {
   }
   #featureTabs {
     border-bottom: 1px solid #ccc;
-}
-#featureTabs .nav-item {
+  }
+  #featureTabs .nav-item {
     border-bottom: none;
-}
-.blue-square.blue-square, .blue-square-2.blue-square {
+  }
+  .blue-square.blue-square,
+  .blue-square-2.blue-square {
     border-radius: 200px 0 0 200px;
     right: 0;
     top: 100px;
-}
-.cards-container .card:nth-child(2) {
+  }
+  .cards-container .card:nth-child(2) {
     margin-top: 30px;
     margin-bottom: -30px;
-}
-.cards-container .card:nth-child(3) {
+  }
+  .cards-container .card:nth-child(3) {
     margin-top: 60px;
     margin-bottom: -60px;
-}
+  }
   body .feature-flex-content h1 {
     text-align: left;
-}
+  }
   body .feature-flex-content h3 {
     text-align: left;
-}
-body section .container h3, body .feature-description h3 {
+  }
+  body section .container h3,
+  body .feature-description h3 {
     margin: 0 auto;
-}
+  }
 
-  .bloque1 { order: 1; }
-  .bloque2 { order: 2; }
+  .bloque1 {
+    order: 1;
+  }
+  .bloque2 {
+    order: 2;
+  }
 
   .blue-square,
   .blue-square-2 {
@@ -481,7 +519,7 @@ body section .container h3, body .feature-description h3 {
     justify-content: space-between;
   }
 
-   .mobile-logo,
+  .mobile-logo,
   .navbar-toggler,
   .navbar-collapse,
   .mobile-header,
@@ -496,19 +534,22 @@ body section .container h3, body .feature-description h3 {
     display: flex !important;
     flex-direction: row;
     gap: 1rem;
-    margin-left: auto;           /* esto lo envía a la derecha */
+    margin-left: auto; /* esto lo envía a la derecha */
   }
   .navbar-nav.d-md-flex .nav-link {
     color: #000;
     text-transform: none;
     font-weight: 400;
     letter-spacing: normal;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
   }
+  footer div .nav {
+    display: flex !important;
+}
   footer .container {
-    max-width: 100%!important;
+    max-width: 100% !important;
   }
   body footer .d-flex {
     padding: 20px 100px;
-}
+  }
 }

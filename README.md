@@ -1,23 +1,50 @@
-📄Descripció - Enunciat de l'exercici
+📄 Descripción
 
-El teu repte és construir una landing page i fer que sembli el més possible a el disseny donat, utilitzant:
-HTML i SASS. -> sass bootstrap 5
-Bootstrap 5: Sistema de columnes + validacions
-Media queries -> Bootstrap 5 Media Queries
+Este proyecto consiste en construir una landing page a partir de un diseño proporcionado, buscando reproducirlo lo más fielmente posible.
 
-💻Tecnologies Utilitzades
+Se utilizan:
 
-HTML i CSS
+HTML5
 
+SASS (incluyendo el uso de Bootstrap 5)
 
-🛠️Instal·lació
+Bootstrap 5 (sistema de grid, validaciones y media queries)
 
-[Passos necessaris per a la instal·lació del projecte en un entorn local.](https://github.com/justmove1987/1-2-html-i-css-amb-flex-nivell1-2-3)
+💻 Tecnologías utilizadas
 
+HTML5
 
-▶️Execució
+SASS
 
-[Instruccions per a l'execució del projecte un cop instal·lat.](https://justmove1987.github.io/1-2-html-i-css-amb-flex-nivell1-2-3/)
+Bootstrap 5
+
+Media Queries (integradas en Bootstrap 5)
+
+🛠️ Instalación
+
+Sigue estos pasos para instalar y ejecutar el proyecto en tu entorno local:
+
+Clona el repositorio:
+
+git clone https://github.com/justmove1987/1-2-html-i-css-amb-flex-nivell1-2-3.git
+
+Entra en la carpeta del proyecto:
+
+cd 1-2-html-i-css-amb-flex-nivell1-2-3
+
+(Opcional) Si trabajas con SASS, instala las dependencias y compílalo:
+
+# Por ejemplo, con npm y sass
+npm install
+npm run build:sass
+
+▶️ Ejecución
+
+Abre el archivo index.html en tu navegador.
+
+O bien visita la demo en GitHub Pages:
+
+https://justmove1987.github.io/1-2-html-i-css-amb-flex-nivell1-2-3/
 
 
 

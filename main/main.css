@@ -9,7 +9,12 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
 }
-body h1, body h2, body h3, body h4, body h5, body h6 {
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
   text-align: center;
 }
 body img {
@@ -29,7 +34,8 @@ body .feature-flex-content h1 {
   margin-bottom: 20px;
   font-weight: bold;
 }
-body .py-5 .container h2, body .feature-description h2 {
+body .py-5 .container h2,
+body .feature-description h2 {
   margin-top: 20px;
   font-size: 1.8em;
   margin-bottom: 20px;
@@ -57,7 +63,8 @@ body footer .d-flex img {
 body footer nav {
   display: block;
 }
-body section .container h3, body .feature-description h3 {
+body section .container h3,
+body .feature-description h3 {
   font-size: 1.2em;
   font-weight: lighter;
   color: rgb(142, 137, 137) !important;
@@ -313,7 +320,7 @@ nav.navbar .container {
 /* 3) Base look for every tab button */
 #featureTabs .nav-link {
   border: none; /* kill all borders */
-  color: #6B7280; /* gray text */
+  color: #6b7280; /* gray text */
   font-weight: 500;
   font-size: 1rem;
   padding-bottom: 0.5rem;
@@ -340,7 +347,7 @@ nav.navbar .container {
   left: 0;
   height: 4px;
   width: 100%;
-  background-color: #FA5959;
+  background-color: #fa5959;
   border-radius: 2px 2px 0 0;
 }
 
@@ -354,6 +361,8 @@ nav.navbar .container {
 .btn-primary {
   background-color: #5166e3;
   border-color: #5166e3;
+  border-radius: 10px !important;
+  box-shadow: 0px 3px 5px #989696;
 }
 .btn-primary:hover {
   background-color: white;
@@ -361,6 +370,10 @@ nav.navbar .container {
   border-color: #5166e3;
 }
 
+.btn-outline-secondary {
+  border-radius: 10px !important;
+  box-shadow: 0px 3px 5px #989696;
+}
 .btn-outline-secondary:hover {
   background-color: white;
   color: #333;
@@ -370,6 +383,8 @@ nav.navbar .container {
 .btn-danger {
   background-color: #fb5859;
   border-color: #fb5859;
+  border-radius: 10px !important;
+  box-shadow: 0px 3px 5px #989696;
 }
 .btn-danger:hover {
   background-color: white;
@@ -389,6 +404,12 @@ footer {
 footer h4 {
   font-size: 1.2rem;
   margin-bottom: 10px;
+}
+footer div .nav {
+  display: contents !important;
+}
+footer .container {
+  max-width: 100%;
 }
 footer h3 {
   font-size: 2rem;
@@ -415,7 +436,8 @@ footer form .btn {
   #featureTabs .nav-item {
     border-bottom: none;
   }
-  .blue-square.blue-square, .blue-square-2.blue-square {
+  .blue-square.blue-square,
+  .blue-square-2.blue-square {
     border-radius: 200px 0 0 200px;
     right: 0;
     top: 100px;
@@ -434,7 +456,8 @@ footer form .btn {
   body .feature-flex-content h3 {
     text-align: left;
   }
-  body section .container h3, body .feature-description h3 {
+  body section .container h3,
+  body .feature-description h3 {
     margin: 0 auto;
   }
   .bloque1 {
@@ -480,6 +503,9 @@ footer form .btn {
     font-weight: 400;
     letter-spacing: normal;
     padding: 0.5rem 1rem;
+  }
+  footer div .nav {
+    display: flex !important;
   }
   footer .container {
     max-width: 100% !important;
